@@ -1,32 +1,14 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/SantanderMetGroup/binder-atlas/master)
 
-This repo holds the binder for https://github.com/IPCC-WG1/Atlas.
+This repo holds the binder for https://github.com/IPCC-WG1/Atlas
 
-The docker image was built using the following binder/environemnt.yml.
+The docker image was built with:
 
-```yaml
-name: climate4R
-channels:
-  - santandermetgroup
-  - conda-forge
-  - r
-  - defaults
-dependencies:
-  - climate4r=1.5.1
-  - r-irkernel
-  - jupyter
-  - nbgitpuller # required for decouple binder and repo
-  # extra for R
-  - r-devtools
-  - r-gridextra
-  - r-xtable
-  - r-magrittr
-  - r-httr
-  - r-lattice
-  - r-latticeExtra
-  # extra for python
-  - xarray
-  - regionmask
+```bash
+GIT_REPO="https://github.com/SantanderMetGroup/binder-atlas"
+GIT_REF=master
+GIT_HASH=$(git ls-remote ${GIT_REPO} ${GIT_REF} | grep HEAD | awk '{ print $1 }' | cut -c -7)
+DOCKER_IMAGE_REF="santandermetgroup/ipcc-wgi-ar6-atlas-env:${GIT_HASH}"
+repo2docker --no-run --subdir binder/conda --user-name jovyan --image ${DOCKER_IMAGE_REF} --ref ${GIT_REF} ${GIT_REPO}
+docker push ${DOCKER_IMAGE_REF}
 ```
-
-To build the docker image: `jupyter-repo2docker --ref BRANCH --user-name jovyan REPO`.
