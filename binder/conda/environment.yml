@@ -30,7 +30,8 @@ dependencies:
   # Shell scripts dependencies
   - cdo ==1.9.8
   - nco ==4.9.4
-  # labextension (i.e. git) build dependencies
-  - nodejs >=14,<15
-  - pip ==21.0.1
-  - wheel ==0.36.2
+  # optional jupyter labextensions (i.e. git) build dependencies
+  - jupyterlab-git
+  - nodejs
+  - pip
+  - wheel

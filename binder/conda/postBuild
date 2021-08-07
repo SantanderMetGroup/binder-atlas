@@ -22,14 +22,23 @@ def _(*args, **kwargs):
         print("\nERROR", return_code, " ".join(args))
         sys.exit(return_code)
 
-# verify the environment is self-consistent before even starting
-_(sys.executable, "-m", "pip", "check")
+# install github extension
+#_("jupyter", "labextension", "install", "@jupyterlab/github")
 
-# install the labextension
-_(sys.executable, "-m", "pip", "install", ".")
+# install TOC extension
+_("jupyter", "labextension", "install", "@jupyterlab/toc")
 
-# verify the environment the extension didn't break anything
-_(sys.executable, "-m", "pip", "check")
+# install topbar extension
+#_("jupyter", "labextension", "install", 
+#    "jupyterlab-topbar-extension", 
+#    "jupyterlab-system-monitor", 
+#    "jupyterlab-topbar-text", 
+#    "jupyterlab-theme-toggle",
+)
+_("jupyter", "labextension", "install", 
+    "jupyterlab-topbar-extension", 
+    "jupyterlab-theme-toggle",
+)
 
 # list the extensions
 _("jupyter", "server", "extension", "list")
@@ -38,5 +47,3 @@ _("jupyter", "server", "extension", "list")
 _("jupyter", "labextension", "list")
 
 
-print("JupyterLab with jupyterlab_git is ready to run with:\n")
-print("\tjupyter lab\n")
