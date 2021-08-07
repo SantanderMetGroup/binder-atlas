@@ -34,7 +34,7 @@ _("jupyter", "labextension", "install", "@jupyterlab/toc")
 #    "jupyterlab-system-monitor", 
 #    "jupyterlab-topbar-text", 
 #    "jupyterlab-theme-toggle",
-)
+#)
 _("jupyter", "labextension", "install", 
     "jupyterlab-topbar-extension", 
     "jupyterlab-theme-toggle",
