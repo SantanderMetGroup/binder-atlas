@@ -1,4 +1,4 @@
-name: ipcc-ar6-wg1-rees
+name: ipcc-wgi-ar6-env
 channels:
   - conda-forge
   - r
@@ -14,7 +14,8 @@ dependencies:
   - notebook ==6.4.2
   - jupyterlab ==3.1.4
   - jupyter_nbextensions_configurator ==0.4.1
-  - nbgitpuller ==0.10.1 # required for decouple binder and repo
+  # required for decouple binder and repo
+  - nbgitpuller ==0.10.1
   # Dependencies for notebooks
   - r-devtools ==2.4.1
   - r-gridextra ==2.3
@@ -29,3 +30,7 @@ dependencies:
   # Shell scripts dependencies
   - cdo ==1.9.8
   - nco ==4.9.4
+  # labextension (i.e. git) build dependencies
+  - nodejs >=14,<15
+  - pip ==21.0.1
+  - wheel ==0.36.2
