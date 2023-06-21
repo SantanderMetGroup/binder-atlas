@@ -33,10 +33,10 @@ dependencies:
 
   # Jupyter and JupyterHub dependencies
   - r-irkernel
-  - jupyter
-  - jupyterhub <4
-  - notebook
-  - jupyterlab
+  - jupyter ==1.0.0
+  - jupyterhub ==1.4.2
+  - notebook ==6.4.2
+  - jupyterlab ==3.1.4
   - jupyter_nbextensions_configurator
   - jupyterlab-git
   - jupyterlab-github
