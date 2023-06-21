@@ -1,1 +1,1 @@
-FROM santandermetgroup/binder-atlas:climate4r-v2.5.4
+FROM santandermetgroup/binder-atlas:6259152
