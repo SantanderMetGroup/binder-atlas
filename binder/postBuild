@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -eux
+
+source activate ${NB_PYTHON_PREFIX}
+# https://discourse.jupyter.org/t/how-to-debug-server-at-didnt-respond-in-30-seconds-error/18042
+cp ${NB_PYTHON_PREFIX}/bin/jupyter-lab ${NB_PYTHON_PREFIX}/bin/jupyter-notebook
