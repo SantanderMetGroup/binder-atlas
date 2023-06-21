@@ -1,4 +1,4 @@
-name: ipcc-ar6-wg1-atlas-env
+name: binder-atlas-climate4r-v2.5.4
 channels:
   - conda-forge
   - nodefaults # only conda-forge dependencies
@@ -34,7 +34,7 @@ dependencies:
   # Jupyter and JupyterHub dependencies
   - r-irkernel
   - jupyter
-  - jupyterhub
+  - jupyterhub <4
   - notebook
   - jupyterlab
   - jupyter_nbextensions_configurator
