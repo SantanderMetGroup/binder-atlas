@@ -1,1 +1,1 @@
-FROM santandermetgroup/binder-atlas:6259152
+FROM santandermetgroup/binder-atlas:3a829ac
