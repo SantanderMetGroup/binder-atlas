@@ -30,17 +30,17 @@ dependencies:
   - iris
 
   # Jupyter and JupyterHub dependencies
-  #- r-irkernel
-  #- jupyter ==1.0.0
-  #- jupyterhub ==1.4.2
-  #- notebook ==6.4.2
-  #- jupyterlab ==3.1.4
-  #- jupyter_nbextensions_configurator
-  #- jupyterlab-git
-  #- jupyterlab-github
-  #- jupyterlab-topbar
-  #- jupyterlab-topbar-text
-  #- jupyterlab-system-monitor
+  - r-irkernel
+  - jupyter #==1.0.0
+  - jupyterhub #==1.4.2
+  - notebook #==6.4.2
+  - jupyterlab #==3.1.4
+  - jupyter_nbextensions_configurator
+  - jupyterlab-git
+  - jupyterlab-github
+  - jupyterlab-topbar
+  - jupyterlab-topbar-text
+  - jupyterlab-system-monitor
 
   # required for decouple binder and repo
   - nbgitpuller
