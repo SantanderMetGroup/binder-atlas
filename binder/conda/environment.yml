@@ -7,8 +7,6 @@ dependencies:
   # explicit dependency on R and Python versions
   - r-base ==3.6.3
   - python ==3.7.12
-  #- r-base >=3.6.3,<3.7
-  #- r-climate4r ==2.5.4
   # climate4R v2.5.4 dependencies
   - r-climate4r.udg ==0.2.3
   - r-loader.java ==1.1.1
@@ -32,17 +30,17 @@ dependencies:
   - iris
 
   # Jupyter and JupyterHub dependencies
-  - r-irkernel
-  - jupyter ==1.0.0
-  - jupyterhub ==1.4.2
-  - notebook ==6.4.2
-  - jupyterlab ==3.1.4
-  - jupyter_nbextensions_configurator
-  - jupyterlab-git
-  - jupyterlab-github
-  - jupyterlab-topbar
-  - jupyterlab-topbar-text
-  - jupyterlab-system-monitor
+  #- r-irkernel
+  #- jupyter ==1.0.0
+  #- jupyterhub ==1.4.2
+  #- notebook ==6.4.2
+  #- jupyterlab ==3.1.4
+  #- jupyter_nbextensions_configurator
+  #- jupyterlab-git
+  #- jupyterlab-github
+  #- jupyterlab-topbar
+  #- jupyterlab-topbar-text
+  #- jupyterlab-system-monitor
 
   # required for decouple binder and repo
   - nbgitpuller
